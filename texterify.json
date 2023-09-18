@@ -1,0 +1,8 @@
+{
+    "api_base_url": "https://texterify.allaboutapps.at/api",
+    "api_version": "v1",
+    "project_id": "NONE",
+    "export_configuration_id": "NONE",
+    "export_directory": "Modules/Core/Sources/Assets/Resources",
+    "project_path": ""
+}
