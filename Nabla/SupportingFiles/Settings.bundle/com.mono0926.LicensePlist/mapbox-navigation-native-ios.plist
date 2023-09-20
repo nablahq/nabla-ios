@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright (c) 2020 - Mapbox, Inc.
+
+You may use this code with your Mapbox account and under the
+Mapbox Terms of Service (https://www.mapbox.com/tos/).
+
+All other rights reserved.
+</string>
+			<key>License</key>
+			<string>unknown</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>
