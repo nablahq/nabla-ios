@@ -6,13 +6,17 @@ import UIKit
 import Utilities
 import ForceUpdateFeature
 import Toolbox
+import Bluejay
+import UserNotifications
 
-@UIApplicationMain
+let bluejay = Bluejay()
+
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupLogging(for: AppEnvironment.current)
         log.info(AppEnvironment.current.appInfo)
 
@@ -21,8 +25,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CredentialsController.shared.resetOnNewInstallations()
 
         setupForceUpdate()
+        
+        requestPermissionForAlerts()
+        
+        setupBluejay(with: launchOptions)
 
         return true
+    }
+    
+    private func requestPermissionForAlerts() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            if granted {
+                print("User notifications authorization granted")
+            } else if let error = error {
+                print("User notifications authorization error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func setupBluejay(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        let backgroundRestoreConfig = BackgroundRestoreConfig(
+            restoreIdentifier: BLECostants.peripheralRestoreIdentifier,
+            backgroundRestorer: self,
+            listenRestorer: self,
+            launchOptions: launchOptions)
+        
+        let backgroundRestoreMode = BackgroundRestoreMode.enable(backgroundRestoreConfig)
+        
+        let options = StartOptions(enableBluetoothAlert: true, backgroundRestore: backgroundRestoreMode)
+        
+        bluejay.start(mode: .new(options))
     }
 
     // MARK: UISceneSession Lifecycle
@@ -52,6 +85,45 @@ extension AppDelegate {
         case .release:
             log.add(sink: OSLogSink(level: .min(.warning)))
         }
+    }
+}
+
+// MARK: - Bluetooth setup
+
+extension AppDelegate: BackgroundRestorer {
+    func didRestoreConnection(to peripheral: PeripheralIdentifier) -> BackgroundRestoreCompletion {
+        let content = UNMutableNotificationContent()
+        content.title = "Bluejay Heart Sensor"
+        content.body = "Did restore connection."
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+
+        return .continue
+    }
+
+    func didFailToRestoreConnection(to peripheral: PeripheralIdentifier, error: Error) -> BackgroundRestoreCompletion {
+        let content = UNMutableNotificationContent()
+        content.title = "Bluejay Heart Sensor"
+        content.body = "Did fail to restore connection."
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+
+        return .continue
+    }
+}
+
+extension AppDelegate: ListenRestorer {
+    func didReceiveUnhandledListen(from peripheral: PeripheralIdentifier, on characteristic: CharacteristicIdentifier, with value: Data?) -> ListenRestoreAction {
+        let content = UNMutableNotificationContent()
+        content.title = "Bluejay Heart Sensor"
+        content.body = "Did receive unhandled listen."
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+
+        return .promiseRestoration
     }
 }
 

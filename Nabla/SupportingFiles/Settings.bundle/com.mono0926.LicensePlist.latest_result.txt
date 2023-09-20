@@ -1,39 +1,107 @@
-name: Alamofire, nameSpecified: Alamofire, owner: Alamofire, version: 5.7.1, source: https://github.com/Alamofire/Alamofire
+name: Alamofire, nameSpecified: Alamofire, owner: Alamofire, version: 5.8.0, source: https://github.com/Alamofire/Alamofire
 
-name: AlamofireImage, nameSpecified: AlamofireImage, owner: Alamofire, version: 4.2.0, source: https://github.com/Alamofire/AlamofireImage
+name: AlamofireImage, nameSpecified: AlamofireImage, owner: Alamofire, version: 4.3.0, source: https://github.com/Alamofire/AlamofireImage
 
-name: DataSource, nameSpecified: DataSource, owner: allaboutapps, version: 8.1.4, source: https://github.com/allaboutapps/DataSource
+name: ALRadioButtons, nameSpecified: ALRadioButtons, owner: alxrguz, version: 1.2.2, source: https://github.com/alxrguz/ALRadioButtons
+
+name: bluejay, nameSpecified: bluejay, owner: steamclock, version: , source: https://github.com/steamclock/bluejay
+
+name: DataSource, nameSpecified: DataSource, owner: allaboutapps, version: 8.1.5, source: https://github.com/allaboutapps/DataSource
 
 name: Differ, nameSpecified: Differ, owner: tonyarnold, version: 1.4.6, source: https://github.com/tonyarnold/Differ
 
-name: Fetch, nameSpecified: Fetch, owner: allaboutapps, version: 3.1.5, source: https://github.com/allaboutapps/Fetch
+name: Fetch, nameSpecified: Fetch, owner: allaboutapps, version: 3.1.6, source: https://github.com/allaboutapps/Fetch
 
 name: KeychainAccess, nameSpecified: KeychainAccess, owner: kishikawakatsumi, version: 4.2.2, source: https://github.com/kishikawakatsumi/KeychainAccess
 
 name: Logbook, nameSpecified: Logbook, owner: allaboutapps, version: 1.2.1, source: https://github.com/allaboutapps/Logbook
 
+name: mapbox-common-ios, nameSpecified: mapbox-common-ios, owner: mapbox, version: 23.8.0, source: https://github.com/mapbox/mapbox-common-ios
+
+name: mapbox-core-maps-ios, nameSpecified: mapbox-core-maps-ios, owner: mapbox, version: 10.16.0, source: https://github.com/mapbox/mapbox-core-maps-ios
+
+name: mapbox-directions-swift, nameSpecified: mapbox-directions-swift, owner: mapbox, version: 2.11.1, source: https://github.com/mapbox/mapbox-directions-swift
+
+name: mapbox-events-ios, nameSpecified: mapbox-events-ios, owner: mapbox, version: 1.0.10, source: https://github.com/mapbox/mapbox-events-ios
+
+name: mapbox-maps-ios, nameSpecified: mapbox-maps-ios, owner: mapbox, version: 10.16.0, source: https://github.com/mapbox/mapbox-maps-ios
+
+name: mapbox-navigation-ios, nameSpecified: mapbox-navigation-ios, owner: mapbox, version: 2.16.0, source: https://github.com/mapbox/mapbox-navigation-ios
+
+name: mapbox-navigation-native-ios, nameSpecified: MapboxNavigationNative, owner: mapbox, version: 157.0.0, source: https://github.com/mapbox/mapbox-navigation-native-ios
+
+name: mapbox-search-ios, nameSpecified: mapbox-search-ios, owner: mapbox, version: , source: https://github.com/mapbox/mapbox-search-ios
+
+name: mapbox-speech-swift, nameSpecified: mapbox-speech-swift, owner: mapbox, version: 2.1.1, source: https://github.com/mapbox/mapbox-speech-swift
+
+name: MapboxGeocoder.swift, nameSpecified: MapboxGeocoder.swift, owner: mapbox, version: 0.15.0, source: https://github.com/mapbox/MapboxGeocoder.swift
+
+name: Polyline, nameSpecified: Polyline, owner: raphaelmor, version: 5.1.0, source: https://github.com/raphaelmor/Polyline
+
+name: Solar, nameSpecified: Solar, owner: ceeK, version: 3.0.1, source: https://github.com/ceeK/Solar
+
 name: StatefulViewController, nameSpecified: StatefulViewController, owner: allaboutapps, version: 5.2.0, source: https://github.com/allaboutapps/StatefulViewController
 
-name: Toolbox, nameSpecified: Toolbox, owner: allaboutapps, version: 3.0.1, source: https://github.com/allaboutapps/Toolbox
+name: swift-argument-parser, nameSpecified: swift-argument-parser, owner: apple, version: 1.2.3, source: https://github.com/apple/swift-argument-parser
 
-name: Alamofire, nameSpecified: Alamofire, owner: Alamofire, version: 5.7.1, source: https://github.com/Alamofire/Alamofire
+name: toast-swift, nameSpecified: Toast, owner: BastiaanJansen, version: 1.5.0, source: https://github.com/BastiaanJansen/toast-swift
 
-name: AlamofireImage, nameSpecified: AlamofireImage, owner: Alamofire, version: 4.2.0, source: https://github.com/Alamofire/AlamofireImage
+name: Toolbox, nameSpecified: Toolbox, owner: allaboutapps, version: 5.0.1, source: https://github.com/allaboutapps/Toolbox
 
-name: DataSource, nameSpecified: DataSource, owner: allaboutapps, version: 8.1.4, source: https://github.com/allaboutapps/DataSource
+name: turf-swift, nameSpecified: turf-swift, owner: mapbox, version: 2.7.0, source: https://github.com/mapbox/turf-swift
+
+name: Alamofire, nameSpecified: Alamofire, owner: Alamofire, version: 5.8.0, source: https://github.com/Alamofire/Alamofire
+
+name: AlamofireImage, nameSpecified: AlamofireImage, owner: Alamofire, version: 4.3.0, source: https://github.com/Alamofire/AlamofireImage
+
+name: ALRadioButtons, nameSpecified: ALRadioButtons, owner: alxrguz, version: 1.2.2, source: https://github.com/alxrguz/ALRadioButtons
+
+name: bluejay, nameSpecified: bluejay, owner: steamclock, version: , source: https://github.com/steamclock/bluejay
+
+name: DataSource, nameSpecified: DataSource, owner: allaboutapps, version: 8.1.5, source: https://github.com/allaboutapps/DataSource
 
 name: Differ, nameSpecified: Differ, owner: tonyarnold, version: 1.4.6, source: https://github.com/tonyarnold/Differ
 
-name: Fetch, nameSpecified: Fetch, owner: allaboutapps, version: 3.1.5, source: https://github.com/allaboutapps/Fetch
+name: Fetch, nameSpecified: Fetch, owner: allaboutapps, version: 3.1.6, source: https://github.com/allaboutapps/Fetch
 
 name: KeychainAccess, nameSpecified: KeychainAccess, owner: kishikawakatsumi, version: 4.2.2, source: https://github.com/kishikawakatsumi/KeychainAccess
 
 name: Logbook, nameSpecified: Logbook, owner: allaboutapps, version: 1.2.1, source: https://github.com/allaboutapps/Logbook
 
+name: mapbox-common-ios, nameSpecified: mapbox-common-ios, owner: mapbox, version: 23.8.0, source: https://github.com/mapbox/mapbox-common-ios
+
+name: mapbox-core-maps-ios, nameSpecified: mapbox-core-maps-ios, owner: mapbox, version: 10.16.0, source: https://github.com/mapbox/mapbox-core-maps-ios
+
+name: mapbox-directions-swift, nameSpecified: mapbox-directions-swift, owner: mapbox, version: 2.11.1, source: https://github.com/mapbox/mapbox-directions-swift
+
+name: mapbox-events-ios, nameSpecified: mapbox-events-ios, owner: mapbox, version: 1.0.10, source: https://github.com/mapbox/mapbox-events-ios
+
+name: mapbox-maps-ios, nameSpecified: mapbox-maps-ios, owner: mapbox, version: 10.16.0, source: https://github.com/mapbox/mapbox-maps-ios
+
+name: mapbox-navigation-ios, nameSpecified: mapbox-navigation-ios, owner: mapbox, version: 2.16.0, source: https://github.com/mapbox/mapbox-navigation-ios
+
+name: mapbox-navigation-native-ios, nameSpecified: MapboxNavigationNative, owner: mapbox, version: 157.0.0, source: https://github.com/mapbox/mapbox-navigation-native-ios
+
+name: mapbox-search-ios, nameSpecified: mapbox-search-ios, owner: mapbox, version: , source: https://github.com/mapbox/mapbox-search-ios
+
+name: mapbox-speech-swift, nameSpecified: mapbox-speech-swift, owner: mapbox, version: 2.1.1, source: https://github.com/mapbox/mapbox-speech-swift
+
+name: MapboxGeocoder.swift, nameSpecified: MapboxGeocoder.swift, owner: mapbox, version: 0.15.0, source: https://github.com/mapbox/MapboxGeocoder.swift
+
+name: Polyline, nameSpecified: Polyline, owner: raphaelmor, version: 5.1.0, source: https://github.com/raphaelmor/Polyline
+
+name: Solar, nameSpecified: Solar, owner: ceeK, version: 3.0.1, source: https://github.com/ceeK/Solar
+
 name: StatefulViewController, nameSpecified: StatefulViewController, owner: allaboutapps, version: 5.2.0, source: https://github.com/allaboutapps/StatefulViewController
 
-name: Toolbox, nameSpecified: Toolbox, owner: allaboutapps, version: 3.0.1, source: https://github.com/allaboutapps/Toolbox
+name: swift-argument-parser, nameSpecified: swift-argument-parser, owner: apple, version: 1.2.3, source: https://github.com/apple/swift-argument-parser
+
+name: toast-swift, nameSpecified: Toast, owner: BastiaanJansen, version: 1.5.0, source: https://github.com/BastiaanJansen/toast-swift
+
+name: Toolbox, nameSpecified: Toolbox, owner: allaboutapps, version: 5.0.1, source: https://github.com/allaboutapps/Toolbox
+
+name: turf-swift, nameSpecified: turf-swift, owner: mapbox, version: 2.7.0, source: https://github.com/mapbox/turf-swift
 
 add-version-numbers: false
 
-LicensePlist Version: 3.24.10
+LicensePlist Version: 3.24.11

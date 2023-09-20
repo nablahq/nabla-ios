@@ -28,6 +28,22 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/ALRadioButtons</string>
+			<key>Title</key>
+			<string>ALRadioButtons</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/bluejay</string>
+			<key>Title</key>
+			<string>bluejay</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/DataSource</string>
 			<key>Title</key>
 			<string>DataSource</string>
@@ -68,6 +84,102 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-common-ios</string>
+			<key>Title</key>
+			<string>mapbox-common-ios</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-core-maps-ios</string>
+			<key>Title</key>
+			<string>mapbox-core-maps-ios</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-directions-swift</string>
+			<key>Title</key>
+			<string>mapbox-directions-swift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-events-ios</string>
+			<key>Title</key>
+			<string>mapbox-events-ios</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-maps-ios</string>
+			<key>Title</key>
+			<string>mapbox-maps-ios</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-navigation-ios</string>
+			<key>Title</key>
+			<string>mapbox-navigation-ios</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-navigation-native-ios</string>
+			<key>Title</key>
+			<string>MapboxNavigationNative</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-search-ios</string>
+			<key>Title</key>
+			<string>mapbox-search-ios</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/mapbox-speech-swift</string>
+			<key>Title</key>
+			<string>mapbox-speech-swift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/MapboxGeocoder.swift</string>
+			<key>Title</key>
+			<string>MapboxGeocoder.swift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/Polyline</string>
+			<key>Title</key>
+			<string>Polyline</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/Solar</string>
+			<key>Title</key>
+			<string>Solar</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/StatefulViewController</string>
 			<key>Title</key>
 			<string>StatefulViewController</string>
@@ -76,9 +188,33 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/swift-argument-parser</string>
+			<key>Title</key>
+			<string>swift-argument-parser</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/toast-swift</string>
+			<key>Title</key>
+			<string>Toast</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/Toolbox</string>
 			<key>Title</key>
 			<string>Toolbox</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/turf-swift</string>
+			<key>Title</key>
+			<string>turf-swift</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>

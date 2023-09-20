@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,37 @@
 		39E161D6589E0A8B0AF9E4FE /* ExampleFeature in Frameworks */ = {isa = PBXBuildFile; productRef = E055D511327BBEB90CE47A40 /* ExampleFeature */; };
 		4FAB68F2D1C857AA3832F5E2 /* ForceUpdateFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 143A034DC0129E03F6B36FC3 /* ForceUpdateFeature */; };
 		60A144290033299A1CF170E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F277CF8D9D4E9DD17C6871 /* Assets.xcassets */; };
+		60EC84972AB9A9F3008603A5 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84902AB9A9F2008603A5 /* UIView+Anchors.swift */; };
+		60EC84982AB9A9F3008603A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84912AB9A9F2008603A5 /* Extensions.swift */; };
+		60EC84992AB9A9F3008603A5 /* DataEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84922AB9A9F2008603A5 /* DataEncoder.swift */; };
+		60EC849A2AB9A9F3008603A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84932AB9A9F2008603A5 /* Constants.swift */; };
+		60EC849B2AB9A9F3008603A5 /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84942AB9A9F2008603A5 /* PullUpController.swift */; };
+		60EC84A02AB9AA4C008603A5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC849D2AB9AA4B008603A5 /* Place.swift */; };
+		60EC84A12AB9AA4C008603A5 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC849E2AB9AA4B008603A5 /* DataTypes.swift */; };
+		60EC84A22AB9AA4C008603A5 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC849F2AB9AA4C008603A5 /* Route.swift */; };
+		60EC84A72AB9AA52008603A5 /* TableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84A32AB9AA51008603A5 /* TableSectionHeader.swift */; };
+		60EC84A82AB9AA52008603A5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84A42AB9AA51008603A5 /* SearchResultCell.swift */; };
+		60EC84A92AB9AA52008603A5 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84A52AB9AA52008603A5 /* SettingsCell.swift */; };
+		60EC84AA2AB9AA52008603A5 /* PlaceRouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84A62AB9AA52008603A5 /* PlaceRouteCell.swift */; };
+		60EC84AD2AB9C39F008603A5 /* Bluejay in Frameworks */ = {isa = PBXBuildFile; productRef = 60EC84AC2AB9C39F008603A5 /* Bluejay */; };
+		60EC84B02AB9C414008603A5 /* MapboxCoreNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 60EC84AF2AB9C414008603A5 /* MapboxCoreNavigation */; };
+		60EC84B22AB9C414008603A5 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 60EC84B12AB9C414008603A5 /* MapboxNavigation */; };
+		60EC84B52AB9C4E1008603A5 /* MapboxSearch in Frameworks */ = {isa = PBXBuildFile; productRef = 60EC84B42AB9C4E1008603A5 /* MapboxSearch */; };
+		60EC84B82AB9C517008603A5 /* MapboxGeocoder in Frameworks */ = {isa = PBXBuildFile; productRef = 60EC84B72AB9C517008603A5 /* MapboxGeocoder */; };
+		60EC84BB2AB9C54E008603A5 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 60EC84BA2AB9C54E008603A5 /* Toast */; };
+		60EC84BD2AB9C568008603A5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84BC2AB9C568008603A5 /* MainTabBarController.swift */; };
+		60EC84C22AB9C57D008603A5 /* MeasurementSystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84BF2AB9C57D008603A5 /* MeasurementSystemController.swift */; };
+		60EC84C32AB9C57D008603A5 /* RouteTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84C02AB9C57D008603A5 /* RouteTypeController.swift */; };
+		60EC84C42AB9C57D008603A5 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84C12AB9C57D008603A5 /* SettingsController.swift */; };
+		60EC84C72AB9C690008603A5 /* ALRadioButtons in Frameworks */ = {isa = PBXBuildFile; productRef = 60EC84C62AB9C690008603A5 /* ALRadioButtons */; };
+		60EC84C92AB9CABC008603A5 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84C82AB9CABC008603A5 /* BLEController.swift */; };
+		60EC84D22AB9CAF7008603A5 /* HUDController+BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84CB2AB9CAF6008603A5 /* HUDController+BLE.swift */; };
+		60EC84D32AB9CAF7008603A5 /* SearchPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84CC2AB9CAF6008603A5 /* SearchPointViewController.swift */; };
+		60EC84D42AB9CAF7008603A5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84CD2AB9CAF6008603A5 /* SearchViewController.swift */; };
+		60EC84D52AB9CAF7008603A5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84CE2AB9CAF7008603A5 /* HomeController.swift */; };
+		60EC84D62AB9CAF7008603A5 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84CF2AB9CAF7008603A5 /* HUDController.swift */; };
+		60EC84D72AB9CAF7008603A5 /* RideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84D02AB9CAF7008603A5 /* RideController.swift */; };
+		60EC84D82AB9CAF7008603A5 /* AddPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84D12AB9CAF7008603A5 /* AddPlaceController.swift */; };
 		616864CFBC63565C2144FDFE /* Assets in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4687C66DB9272E8036765C /* Assets */; };
 		6734514935329985B2B1BBA3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04318D92B9D115E4C3965A5 /* AppCoordinator.swift */; };
 		6D28C0DC8269F152C706AF81 /* Utilities in Frameworks */ = {isa = PBXBuildFile; productRef = A502062DA201121DE637C2B4 /* Utilities */; };
@@ -27,10 +58,34 @@
 /* Begin PBXFileReference section */
 		07C06C5DA07E1B3136879DDF /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Modules/Core; sourceTree = SOURCE_ROOT; };
 		14A2E34185D2C98863CC9531 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
-		36324A92C964F6B735470A39 /* Nabla.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Nabla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36324A92C964F6B735470A39 /* Nabla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nabla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18F9692DFD81CD138E1DC6 /* Features */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Features; path = Modules/Features; sourceTree = SOURCE_ROOT; };
 		547287B99718AD2229B8F982 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		56288F6956EBF174518D17D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = Settings.bundle; sourceTree = "<group>"; };
+		60EC84902AB9A9F2008603A5 /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		60EC84912AB9A9F2008603A5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		60EC84922AB9A9F2008603A5 /* DataEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEncoder.swift; sourceTree = "<group>"; };
+		60EC84932AB9A9F2008603A5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		60EC84942AB9A9F2008603A5 /* PullUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
+		60EC849D2AB9AA4B008603A5 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		60EC849E2AB9AA4B008603A5 /* DataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
+		60EC849F2AB9AA4C008603A5 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		60EC84A32AB9AA51008603A5 /* TableSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionHeader.swift; sourceTree = "<group>"; };
+		60EC84A42AB9AA51008603A5 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		60EC84A52AB9AA52008603A5 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		60EC84A62AB9AA52008603A5 /* PlaceRouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceRouteCell.swift; sourceTree = "<group>"; };
+		60EC84BC2AB9C568008603A5 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		60EC84BF2AB9C57D008603A5 /* MeasurementSystemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementSystemController.swift; sourceTree = "<group>"; };
+		60EC84C02AB9C57D008603A5 /* RouteTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTypeController.swift; sourceTree = "<group>"; };
+		60EC84C12AB9C57D008603A5 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		60EC84C82AB9CABC008603A5 /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		60EC84CB2AB9CAF6008603A5 /* HUDController+BLE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HUDController+BLE.swift"; sourceTree = "<group>"; };
+		60EC84CC2AB9CAF6008603A5 /* SearchPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPointViewController.swift; sourceTree = "<group>"; };
+		60EC84CD2AB9CAF6008603A5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		60EC84CE2AB9CAF7008603A5 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		60EC84CF2AB9CAF7008603A5 /* HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDController.swift; sourceTree = "<group>"; };
+		60EC84D02AB9CAF7008603A5 /* RideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideController.swift; sourceTree = "<group>"; };
+		60EC84D12AB9CAF7008603A5 /* AddPlaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceController.swift; sourceTree = "<group>"; };
 		9FA08624A253DF7656CEADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A903D744E90E3BE22C8ABD22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C04318D92B9D115E4C3965A5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -47,13 +102,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				977FFA461FE1A874B7AFE653 /* MainFeature in Frameworks */,
+				60EC84AD2AB9C39F008603A5 /* Bluejay in Frameworks */,
 				17D0DEFBEAF55FC7ABE3C4A0 /* AuthFeature in Frameworks */,
+				60EC84BB2AB9C54E008603A5 /* Toast in Frameworks */,
 				39E161D6589E0A8B0AF9E4FE /* ExampleFeature in Frameworks */,
 				4FAB68F2D1C857AA3832F5E2 /* ForceUpdateFeature in Frameworks */,
 				616864CFBC63565C2144FDFE /* Assets in Frameworks */,
 				04FB0F8F61474FF98698EF93 /* Models in Frameworks */,
+				60EC84B22AB9C414008603A5 /* MapboxNavigation in Frameworks */,
+				60EC84C72AB9C690008603A5 /* ALRadioButtons in Frameworks */,
+				60EC84B02AB9C414008603A5 /* MapboxCoreNavigation in Frameworks */,
+				60EC84B82AB9C517008603A5 /* MapboxGeocoder in Frameworks */,
 				2864DA3A269D4C8A155CBA8E /* Networking in Frameworks */,
 				6D28C0DC8269F152C706AF81 /* Utilities in Frameworks */,
+				60EC84B52AB9C4E1008603A5 /* MapboxSearch in Frameworks */,
 				EF5498ABFE251896790FCC50 /* CommonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +140,30 @@
 				F2F277CF8D9D4E9DD17C6871 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		60EC84BE2AB9C571008603A5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				60EC84BF2AB9C57D008603A5 /* MeasurementSystemController.swift */,
+				60EC84C02AB9C57D008603A5 /* RouteTypeController.swift */,
+				60EC84C12AB9C57D008603A5 /* SettingsController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		60EC84CA2AB9CADC008603A5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				60EC84D12AB9CAF7008603A5 /* AddPlaceController.swift */,
+				60EC84CE2AB9CAF7008603A5 /* HomeController.swift */,
+				60EC84CF2AB9CAF7008603A5 /* HUDController.swift */,
+				60EC84CB2AB9CAF6008603A5 /* HUDController+BLE.swift */,
+				60EC84D02AB9CAF7008603A5 /* RideController.swift */,
+				60EC84CC2AB9CAF6008603A5 /* SearchPointViewController.swift */,
+				60EC84CD2AB9CAF6008603A5 /* SearchViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		616EFC070377919D5D7AECD5 = {
@@ -120,6 +206,22 @@
 		D29B6684F522E42C3DB18626 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				60EC84CA2AB9CADC008603A5 /* Home */,
+				60EC84BE2AB9C571008603A5 /* Settings */,
+				60EC84BC2AB9C568008603A5 /* MainTabBarController.swift */,
+				60EC84C82AB9CABC008603A5 /* BLEController.swift */,
+				60EC84A62AB9AA52008603A5 /* PlaceRouteCell.swift */,
+				60EC84A42AB9AA51008603A5 /* SearchResultCell.swift */,
+				60EC84A52AB9AA52008603A5 /* SettingsCell.swift */,
+				60EC84A32AB9AA51008603A5 /* TableSectionHeader.swift */,
+				60EC849E2AB9AA4B008603A5 /* DataTypes.swift */,
+				60EC849D2AB9AA4B008603A5 /* Place.swift */,
+				60EC849F2AB9AA4C008603A5 /* Route.swift */,
+				60EC84932AB9A9F2008603A5 /* Constants.swift */,
+				60EC84922AB9A9F2008603A5 /* DataEncoder.swift */,
+				60EC84912AB9A9F2008603A5 /* Extensions.swift */,
+				60EC84942AB9A9F2008603A5 /* PullUpController.swift */,
+				60EC84902AB9A9F2008603A5 /* UIView+Anchors.swift */,
 				C04318D92B9D115E4C3965A5 /* AppCoordinator.swift */,
 				A903D744E90E3BE22C8ABD22 /* AppDelegate.swift */,
 				CF1C5F9BC02C5CAE5D00F71D /* SceneDelegate.swift */,
@@ -166,6 +268,13 @@
 				184E21F9F9B9787221FB055E /* Networking */,
 				A502062DA201121DE637C2B4 /* Utilities */,
 				54E0A3348356F4C252779B2A /* CommonUI */,
+				60EC84AC2AB9C39F008603A5 /* Bluejay */,
+				60EC84AF2AB9C414008603A5 /* MapboxCoreNavigation */,
+				60EC84B12AB9C414008603A5 /* MapboxNavigation */,
+				60EC84B42AB9C4E1008603A5 /* MapboxSearch */,
+				60EC84B72AB9C517008603A5 /* MapboxGeocoder */,
+				60EC84BA2AB9C54E008603A5 /* Toast */,
+				60EC84C62AB9C690008603A5 /* ALRadioButtons */,
 			);
 			productName = Nabla;
 			productReference = 36324A92C964F6B735470A39 /* Nabla.app */;
@@ -180,11 +289,6 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "canarin team";
-				TargetAttributes = {
-					4A30E41710DD858E5FDB1D4C = {
-						DevelopmentTeam = M8F9QH57A6;
-					};
-				};
 			};
 			buildConfigurationList = E33DE469D4C3180E02944F3C /* Build configuration list for PBXProject "Nabla" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -195,6 +299,14 @@
 				en,
 			);
 			mainGroup = 616EFC070377919D5D7AECD5;
+			packageReferences = (
+				60EC84AB2AB9C39F008603A5 /* XCRemoteSwiftPackageReference "bluejay" */,
+				60EC84AE2AB9C414008603A5 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
+				60EC84B32AB9C4E1008603A5 /* XCRemoteSwiftPackageReference "mapbox-search-ios" */,
+				60EC84B62AB9C517008603A5 /* XCRemoteSwiftPackageReference "MapboxGeocoder.swift" */,
+				60EC84B92AB9C54E008603A5 /* XCRemoteSwiftPackageReference "toast-swift" */,
+				60EC84C52AB9C690008603A5 /* XCRemoteSwiftPackageReference "ALRadioButtons" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -281,9 +393,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60EC84A92AB9AA52008603A5 /* SettingsCell.swift in Sources */,
+				60EC849B2AB9A9F3008603A5 /* PullUpController.swift in Sources */,
+				60EC84A72AB9AA52008603A5 /* TableSectionHeader.swift in Sources */,
+				60EC84982AB9A9F3008603A5 /* Extensions.swift in Sources */,
+				60EC84A22AB9AA4C008603A5 /* Route.swift in Sources */,
+				60EC84A82AB9AA52008603A5 /* SearchResultCell.swift in Sources */,
+				60EC84AA2AB9AA52008603A5 /* PlaceRouteCell.swift in Sources */,
 				6734514935329985B2B1BBA3 /* AppCoordinator.swift in Sources */,
+				60EC84972AB9A9F3008603A5 /* UIView+Anchors.swift in Sources */,
+				60EC84C22AB9C57D008603A5 /* MeasurementSystemController.swift in Sources */,
 				6EC90CCA07B3FE5CB99D9CC7 /* AppDelegate.swift in Sources */,
+				60EC84C32AB9C57D008603A5 /* RouteTypeController.swift in Sources */,
+				60EC84BD2AB9C568008603A5 /* MainTabBarController.swift in Sources */,
+				60EC84D42AB9CAF7008603A5 /* SearchViewController.swift in Sources */,
 				E5C59ECA28DE851808E2A5D0 /* SceneDelegate.swift in Sources */,
+				60EC84D82AB9CAF7008603A5 /* AddPlaceController.swift in Sources */,
+				60EC84A02AB9AA4C008603A5 /* Place.swift in Sources */,
+				60EC84D32AB9CAF7008603A5 /* SearchPointViewController.swift in Sources */,
+				60EC84C42AB9C57D008603A5 /* SettingsController.swift in Sources */,
+				60EC84A12AB9AA4C008603A5 /* DataTypes.swift in Sources */,
+				60EC84D22AB9CAF7008603A5 /* HUDController+BLE.swift in Sources */,
+				60EC84D52AB9CAF7008603A5 /* HomeController.swift in Sources */,
+				60EC84D72AB9CAF7008603A5 /* RideController.swift in Sources */,
+				60EC84D62AB9CAF7008603A5 /* HUDController.swift in Sources */,
+				60EC84C92AB9CABC008603A5 /* BLEController.swift in Sources */,
+				60EC84992AB9A9F3008603A5 /* DataEncoder.swift in Sources */,
+				60EC849A2AB9A9F3008603A5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7EC32T954D;
 				INFOPLIST_FILE = Nabla/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,6 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7EC32T954D;
 				INFOPLIST_FILE = Nabla/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -657,6 +795,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7EC32T954D;
 				INFOPLIST_FILE = Nabla/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -677,6 +816,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7EC32T954D;
 				INFOPLIST_FILE = Nabla/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -754,6 +894,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7EC32T954D;
 				INFOPLIST_FILE = Nabla/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -774,6 +915,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7EC32T954D;
 				INFOPLIST_FILE = Nabla/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -818,6 +960,57 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		60EC84AB2AB9C39F008603A5 /* XCRemoteSwiftPackageReference "bluejay" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/steamclock/bluejay.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		60EC84AE2AB9C414008603A5 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-navigation-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.16.0;
+			};
+		};
+		60EC84B32AB9C4E1008603A5 /* XCRemoteSwiftPackageReference "mapbox-search-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-search-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		60EC84B62AB9C517008603A5 /* XCRemoteSwiftPackageReference "MapboxGeocoder.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/MapboxGeocoder.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.0;
+			};
+		};
+		60EC84B92AB9C54E008603A5 /* XCRemoteSwiftPackageReference "toast-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BastiaanJansen/toast-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		60EC84C52AB9C690008603A5 /* XCRemoteSwiftPackageReference "ALRadioButtons" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alxrguz/ALRadioButtons";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		143A034DC0129E03F6B36FC3 /* ForceUpdateFeature */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -834,6 +1027,41 @@
 		5C4687C66DB9272E8036765C /* Assets */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Assets;
+		};
+		60EC84AC2AB9C39F008603A5 /* Bluejay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60EC84AB2AB9C39F008603A5 /* XCRemoteSwiftPackageReference "bluejay" */;
+			productName = Bluejay;
+		};
+		60EC84AF2AB9C414008603A5 /* MapboxCoreNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60EC84AE2AB9C414008603A5 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxCoreNavigation;
+		};
+		60EC84B12AB9C414008603A5 /* MapboxNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60EC84AE2AB9C414008603A5 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigation;
+		};
+		60EC84B42AB9C4E1008603A5 /* MapboxSearch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60EC84B32AB9C4E1008603A5 /* XCRemoteSwiftPackageReference "mapbox-search-ios" */;
+			productName = MapboxSearch;
+		};
+		60EC84B72AB9C517008603A5 /* MapboxGeocoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60EC84B62AB9C517008603A5 /* XCRemoteSwiftPackageReference "MapboxGeocoder.swift" */;
+			productName = MapboxGeocoder;
+		};
+		60EC84BA2AB9C54E008603A5 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60EC84B92AB9C54E008603A5 /* XCRemoteSwiftPackageReference "toast-swift" */;
+			productName = Toast;
+		};
+		60EC84C62AB9C690008603A5 /* ALRadioButtons */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60EC84C52AB9C690008603A5 /* XCRemoteSwiftPackageReference "ALRadioButtons" */;
+			productName = ALRadioButtons;
 		};
 		63A10F26321F2F61CE468494 /* MainFeature */ = {
 			isa = XCSwiftPackageProductDependency;

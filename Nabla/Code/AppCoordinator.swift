@@ -7,6 +7,59 @@ import Toolbox
 import UIKit
 import Utilities
 
+public class MainTabCoordinator: TabBarCoordinator {
+
+    // MARK: - Properties
+
+    private lazy var firstCoordinator = HomeCoordinator(title: Constants.mainTabFirst)
+    private lazy var secondCoordinator = SettingsCoordinator(title: Constants.mainTabSecond)
+
+    // MARK: - Tabs
+
+    private enum Tab: Int, CaseIterable {
+        case first = 0
+        case second
+    }
+
+    private func setupTabs() {
+        addChild(firstCoordinator)
+        addChild(secondCoordinator)
+
+        firstCoordinator.start()
+        secondCoordinator.start()
+
+        tabBarController.viewControllers = [
+            firstCoordinator.rootViewController,
+            secondCoordinator.rootViewController,
+        ]
+
+        tabBarController.selectedIndex = 0
+    }
+
+    // MARK: - Coordinator Start
+
+    override public func start() {
+        setupTabs()
+        
+        tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.backgroundColor = .white
+        tabBarController.tabBar.tintColor = .black
+    }
+
+    public func reset(animated: Bool) {
+        childCoordinators.forEach {
+            ($0 as? NavigationCoordinator)?.popToRoot(animated: animated)
+        }
+        tabBarController.selectedIndex = 0
+    }
+
+    // MARK: - Helpers
+
+    private func setTab(_ tab: Tab) {
+        tabBarController.selectedIndex = tab.rawValue
+    }
+}
+
 class AppCoordinator: Coordinator {
 
     // MARK: Init
@@ -21,7 +74,7 @@ class AppCoordinator: Coordinator {
 
     private(set) var window: UIWindow!
     private var cancellables = Set<AnyCancellable>()
-    private let mainCoordinator = MainCoordinator(tabBarController: .init())
+    private let mainCoordinator = MainTabCoordinator(tabBarController: .init())
     private var forceUpdateWindow: ForceUpdateWindow?
 
     // MARK: Start
