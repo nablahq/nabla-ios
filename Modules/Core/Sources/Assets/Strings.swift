@@ -11,7 +11,7 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum Strings {
   /// Anmelden
-  public static let authLoginButton = Strings.tr("Localizable", "auth_login_button", fallback: "Anmelden")
+  public static let authLoginButton = Strings.tr("Localizable", "auth_login_button", fallback: "Register")
   /// Login
   public static let authLoginTitle = Strings.tr("Localizable", "auth_login_title", fallback: "Login")
   /// Hello, World!

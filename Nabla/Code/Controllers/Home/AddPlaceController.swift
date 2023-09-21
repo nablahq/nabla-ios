@@ -68,7 +68,7 @@ class AddPlaceController: UIViewController, CLLocationManagerDelegate {
         saveButton.layer.zPosition = 1000
         
         backButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: view.safeAreaInsets.top + 60, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 30, heightConstant: 30)
-        saveButton.anchor(view.topAnchor, left:nil, bottom: nil, right:  view.rightAnchor, topConstant: view.safeAreaInsets.top + 60, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 80, heightConstant: 30)
+        saveButton.anchor(view.topAnchor, left:nil, bottom: nil, right: view.rightAnchor, topConstant: view.safeAreaInsets.top + 60, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 80, heightConstant: 30)
         
         mapView.ornaments.scaleBarView.isHidden = true
         mapView.ornaments.compassView.isHidden = true
@@ -86,8 +86,8 @@ class AddPlaceController: UIViewController, CLLocationManagerDelegate {
         addPullUpController()
         
         let markerImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
-        let image = UIImage(named: "map-marker");
-        markerImageView.image = image;
+        let image = UIImage(named: "map-marker")
+        markerImageView.image = image
         markerImageView.center = CGPoint(x: mapView.center.x, y: mapView.center.y - 17.5)
         mapView.addSubview(markerImageView)
     }
@@ -96,8 +96,7 @@ class AddPlaceController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-    public func setCurrentPlace(coordinate: CLLocationCoordinate2D)
-    {
+    public func setCurrentPlace(coordinate: CLLocationCoordinate2D) {
         reverseGeocodeCoordinate(coordinate: coordinate)
     }
 
@@ -182,8 +181,7 @@ class AddPlaceController: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func savePlaceButtonPressed() {
-        if currentPlace != nil
-        {
+        if currentPlace != nil {
             do {
                 places.append(currentPlace!)
                 let encodedData = try JSONEncoder().encode(places)

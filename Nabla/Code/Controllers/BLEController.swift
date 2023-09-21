@@ -8,7 +8,6 @@ import UIKit
 import MapboxMaps
 import Bluejay
 
-
 class BLEController: UIViewController {
     
     private var encoder = DataEncoder()
@@ -18,7 +17,7 @@ class BLEController: UIViewController {
     var sensors: [ScanDiscovery] = []
     var selectedSensor: PeripheralIdentifier?
     
-    let labelTitle : UILabel = {
+    let labelTitle: UILabel = {
         let label = UILabel()
         label.text = "Connect device"
         label.textColor = .black
@@ -28,7 +27,7 @@ class BLEController: UIViewController {
         return label
     }()
     
-    let labelSubtitle : UILabel = {
+    let labelSubtitle: UILabel = {
         let label = UILabel()
         label.text = "Looking for a Nabla, is it on and nearby?"
         label.textColor = .black

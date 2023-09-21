@@ -8,32 +8,8 @@
 import UIKit
 import MapboxMaps
 import Toast
-
-import Assets
 import Networking
-import Toolbox
-
-public class SettingsCoordinator: NavigationCoordinator {
-
-    // MARK: Init
-
-    public init(title: String, navigationController: UINavigationController = UINavigationController()) {
-        super.init(navigationController: navigationController)
-
-        navigationController.tabBarItem.title = title
-        navigationController.tabBarItem.image = UIImage(systemName: "gearshape")
-        navigationController.tabBarItem.selectedImage = UIImage(systemName: "gearshape")
-        navigationController.navigationBar.prefersLargeTitles = true
-    }
-
-    // MARK: Start
-
-    override public func start() {
-        let viewController = SettingsController()
-
-        push(viewController, animated: false)
-    }
-}
+import FirebaseAuth
 
 // swiftlint:disable all
 class SettingsController: UIViewController, UITableViewDelegate {
@@ -49,6 +25,15 @@ class SettingsController: UIViewController, UITableViewDelegate {
         tv.sectionHeaderTopPadding = 10
         return tv
     }()
+    
+    var isAnonymous: Bool = false
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if CredentialsController.shared.currentCredentials!.accessToken == "testToken" || Auth.auth().currentUser!.isAnonymous {
+            isAnonymous = true
+            print("isAnonymous: \(isAnonymous)")
+        }
+    }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -144,7 +129,12 @@ extension SettingsController: UITableViewDataSource {
         }
         else if (section == 2)
         {
-            return 2
+            if isAnonymous {
+                return 1
+            }
+            else {
+                return 2
+            }
         }
         else if (section == 3)
         {
@@ -237,14 +227,6 @@ extension SettingsController: UITableViewDataSource {
                     cell.labelSelectedOption.text = "Bicycle"
                 }
             }
-//            else if(indexPath.row == 1)
-//            {
-//                cell.labelName.text = "Route options"
-//                cell.id = "route_options"
-//                cell.labelSelectedOption.text = ""
-//                cell.labelSelectedOption.textColor = .darkGray
-//                cell.labelName.textColor = .darkGray
-//            }
             else if(indexPath.row == 1)
             {
                 cell.id = "distance_unit"
@@ -276,23 +258,36 @@ extension SettingsController: UITableViewDataSource {
         }
         else if(indexPath.section == 2)
         {
-            if(indexPath.row == 0)
-            {
-                cell.id = "sign_out"
-                cell.labelName.text = "User"
-                cell.labelName.textColor = .darkGray
-                cell.labelSelectedOption.text = "Sign out"
-                cell.labelSelectedOption.textColor = .darkGray
-                cell.actionButton.tintColor = .darkGray
-                cell.labelSelectedOption.text = ""
+            if isAnonymous {
+                if(indexPath.row == 0)
+                {
+                    cell.id = "delete_user_data"
+                    cell.labelName.text = "Delete your data"
+                    cell.labelName.textColor = .red
+                    cell.actionButton.tintColor = .red
+                    cell.labelSelectedOption.text = ""
+                }
             }
-            else if(indexPath.row == 1)
+            else
             {
-                cell.id = "delete_user_data"
-                cell.labelName.text = "Delete your data"
-                cell.labelName.textColor = .red
-                cell.actionButton.tintColor = .red
-                cell.labelSelectedOption.text = ""
+                if(indexPath.row == 0)
+                {
+                    cell.id = "sign_out"
+                    cell.labelName.text = "User"
+                    cell.labelName.textColor = .darkGray
+                    cell.labelSelectedOption.text = "Sign out"
+                    cell.labelSelectedOption.textColor = .darkGray
+                    cell.actionButton.tintColor = .darkGray
+                }
+                if(indexPath.row == 1)
+                {
+                    cell.id = "user_email"
+                    cell.labelName.text = "Email"
+                    cell.labelName.textColor = .darkGray
+                    cell.labelSelectedOption.text =  Auth.auth().currentUser?.email ?? ""
+                    cell.labelSelectedOption.textColor = .darkGray
+                    cell.actionButton.tintColor = .darkGray
+                }
             }
         }
         else if(indexPath.section == 3)
@@ -358,10 +353,6 @@ extension SettingsController: SettingsCellDelegate {
         {
             self.navigationController?.pushViewController(RouteTypeController(), animated: true)
         }
-//        else if(cell.id == "route_options")
-//        {
-//            self.navigationController?.pushViewController(RouteOptionsController(), animated: true)
-//        }
         else if(cell.id == "distance_unit")
         {
             self.navigationController?.pushViewController(MeasurementSystemController(), animated: true)
@@ -407,6 +398,7 @@ extension SettingsController: SettingsCellDelegate {
                 if let tabBarController = self.tabBarController {
                     tabBarController.selectedIndex = 0
                 }
+                CredentialsController.shared.currentCredentials = nil
             }))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
             

@@ -114,7 +114,7 @@ class AppCoordinator: Coordinator {
     // MARK: Present
 
     private func presentLogin(animated: Bool) {
-        let coordinator = AuthCoordinator(navigationController: .init())
+        let coordinator = AuthenticationCoordinator(navigationController: .init())
 
         coordinator.onLogin = { [weak self] in
             self?.reset(animated: true)

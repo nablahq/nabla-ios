@@ -8,6 +8,7 @@ import ForceUpdateFeature
 import Toolbox
 import Bluejay
 import UserNotifications
+import FirebaseCore
 
 let bluejay = Bluejay()
 
@@ -29,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         requestPermissionForAlerts()
         
         setupBluejay(with: launchOptions)
+        
+        FirebaseApp.configure()
 
         return true
     }

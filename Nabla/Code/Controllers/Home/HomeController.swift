@@ -11,35 +11,6 @@ import MapboxSearch
 import UserNotifications
 import Bluejay
 
-import Assets
-import Networking
-import Toolbox
-
-public class HomeCoordinator: NavigationCoordinator {
-
-    // MARK: Init
-
-    public init(title: String, navigationController: UINavigationController = UINavigationController()) {
-        super.init(navigationController: navigationController)
-
-        navigationController.tabBarItem.title = title
-        navigationController.tabBarItem.image = UIImage(systemName: "arrowtriangle.down.circle")
-        navigationController.tabBarItem.selectedImage = UIImage(systemName: "arrowtriangle.down.circle")
-        navigationController.navigationBar.prefersLargeTitles = true
-    }
-
-    // MARK: Start
-
-    override public func start() {
-        let viewController = HomeController()//UIHostingController(rootView: ExampleScreen())
-//        viewController.navigationItem.title = Strings.exampleTitle
-//        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .plain, target: self, action: #selector(logout))
-//        viewController.navigationItem.largeTitleDisplayMode = .always
-
-        push(viewController, animated: false)
-    }
-}
-
 class HomeController: UIViewController, UITableViewDelegate, AddPlaceButtonDelegate {
     
     fileprivate let cellId = "cellId"
@@ -131,8 +102,7 @@ class HomeController: UIViewController, UITableViewDelegate, AddPlaceButtonDeleg
         bluejay.register(connectionObserver: self)
     }
     
-    func loadPlacesFromUserDefaults()
-    {
+    func loadPlacesFromUserDefaults() {
         print(places.count)
         print(places.isEmpty)
         let userDefaults = UserDefaults.standard
