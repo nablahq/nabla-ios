@@ -56,6 +56,9 @@
 		60EC84F62ABB2FEC008603A5 /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84F52ABB2FEC008603A5 /* LoginDelegate.swift */; };
 		60EC84F82ABB34B2008603A5 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84F72ABB34B2008603A5 /* AuthenticationCoordinator.swift */; };
 		60EC84FA2ABB3597008603A5 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84F92ABB3597008603A5 /* AuthenticationController.swift */; };
+		60EC84FC2ABC8019008603A5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84FB2ABC8019008603A5 /* RegisterView.swift */; };
+		60EC84FE2ABEF3CD008603A5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84FD2ABEF3CC008603A5 /* AuthViewController.swift */; };
+		60EC85002AC16B73008603A5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC84FF2AC16B72008603A5 /* RegisterViewController.swift */; };
 		616864CFBC63565C2144FDFE /* Assets in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4687C66DB9272E8036765C /* Assets */; };
 		6734514935329985B2B1BBA3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04318D92B9D115E4C3965A5 /* AppCoordinator.swift */; };
 		6D28C0DC8269F152C706AF81 /* Utilities in Frameworks */ = {isa = PBXBuildFile; productRef = A502062DA201121DE637C2B4 /* Utilities */; };
@@ -107,6 +110,9 @@
 		60EC84F52ABB2FEC008603A5 /* LoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
 		60EC84F72ABB34B2008603A5 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
 		60EC84F92ABB3597008603A5 /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		60EC84FB2ABC8019008603A5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		60EC84FD2ABEF3CC008603A5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		60EC84FF2AC16B72008603A5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9FA08624A253DF7656CEADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A903D744E90E3BE22C8ABD22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C04318D92B9D115E4C3965A5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 				60EC84A42AB9AA51008603A5 /* SearchResultCell.swift */,
 				60EC84A52AB9AA52008603A5 /* SettingsCell.swift */,
 				60EC84A32AB9AA51008603A5 /* TableSectionHeader.swift */,
+				60EC84FB2ABC8019008603A5 /* RegisterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +251,8 @@
 				60EC84E42ABAFAA3008603A5 /* LoginController.swift */,
 				60EC84F72ABB34B2008603A5 /* AuthenticationCoordinator.swift */,
 				60EC84F92ABB3597008603A5 /* AuthenticationController.swift */,
+				60EC84FD2ABEF3CC008603A5 /* AuthViewController.swift */,
+				60EC84FF2AC16B72008603A5 /* RegisterViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -480,8 +489,10 @@
 				60EC84A82AB9AA52008603A5 /* SearchResultCell.swift in Sources */,
 				60EC84AA2AB9AA52008603A5 /* PlaceRouteCell.swift in Sources */,
 				6734514935329985B2B1BBA3 /* AppCoordinator.swift in Sources */,
+				60EC84FC2ABC8019008603A5 /* RegisterView.swift in Sources */,
 				60EC84972AB9A9F3008603A5 /* UIView+Anchors.swift in Sources */,
 				60EC84C22AB9C57D008603A5 /* MeasurementSystemController.swift in Sources */,
+				60EC84FE2ABEF3CD008603A5 /* AuthViewController.swift in Sources */,
 				6EC90CCA07B3FE5CB99D9CC7 /* AppDelegate.swift in Sources */,
 				60EC84C32AB9C57D008603A5 /* RouteTypeController.swift in Sources */,
 				60EC84E52ABAFAA3008603A5 /* LoginController.swift in Sources */,
@@ -492,6 +503,7 @@
 				60EC84A02AB9AA4C008603A5 /* Place.swift in Sources */,
 				60EC84D32AB9CAF7008603A5 /* SearchPointViewController.swift in Sources */,
 				60EC84F12ABB1F23008603A5 /* LoginView.swift in Sources */,
+				60EC85002AC16B73008603A5 /* RegisterViewController.swift in Sources */,
 				60EC84C42AB9C57D008603A5 /* SettingsController.swift in Sources */,
 				60EC84A12AB9AA4C008603A5 /* DataTypes.swift in Sources */,
 				60EC84F62ABB2FEC008603A5 /* LoginDelegate.swift in Sources */,

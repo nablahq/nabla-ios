@@ -1,8 +1,8 @@
 //
-//  LoginController.swift
+//  RegisterViewController.swift
 //  Nabla
 //
-//  Created by Jaksa Tomovic on 20.09.2023..
+//  Created by Jaksa Tomovic on 25.09.2023..
 //  Copyright © 2023 canarin team. All rights reserved.
 //
 
@@ -12,19 +12,19 @@ import Toolbox
 import UIKit
 import FirebaseAuth
 
-class LoginController: UIViewController {
+class RegisterViewController: UIViewController {
     weak var delegate: LoginDelegate?
     var onLogin: (() -> Void)!
     
-    static func create() -> LoginController {
-        let viewController = LoginController()
+    static func create() -> RegisterViewController {
+        let viewController = RegisterViewController()
         return viewController
     }
     
-    private var loginView: LoginView { view as! LoginView }
+    private var registerView: RegisterView { view as! RegisterView }
     
-    private var email: String { loginView.emailTextField.text! }
-    private var password: String { loginView.passwordTextField.text! }
+    private var email: String { registerView.emailTextField.text! }
+    private var password: String { registerView.passwordTextField.text! }
     
     // Hides tab bar when view controller is presented
     override var hidesBottomBarWhenPushed: Bool { get { true } set {} }
@@ -32,7 +32,7 @@ class LoginController: UIViewController {
     // MARK: - View Controller Lifecycle Methods
     
     override func loadView() {
-        view = LoginView()
+        view = RegisterView()
     }
     
     override func viewDidLoad() {
@@ -65,12 +65,12 @@ class LoginController: UIViewController {
     
     // MARK: - Firebase 🔥
     
-    private func login(with email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            print(result as Any)
+    private func createUser(email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            print(authResult as Any)
             guard error == nil else { return self.displayError(error) }
-            print("User signs in successfully")
-            let userInfo = Auth.auth().currentUser
+            print("User created successfully")
+            let userInfo = authResult?.user
             let email = userInfo?.email
             print(email!)
             self.delegate?.loginDidOccur()
@@ -92,8 +92,8 @@ class LoginController: UIViewController {
     // MARK: - Action Handlers
     
     @objc
-    private func handleLogin() {
-        login(with: email, password: password)
+    private func handleCreateAccount() {
+        createUser(email: email, password: password)
     }
     
     @objc
@@ -104,16 +104,16 @@ class LoginController: UIViewController {
     // MARK: - UI Configuration
     
     private func configureNavigationBar() {
-        navigationItem.title = "Sign in"
+        navigationItem.title = "Create acccount"
         navigationItem.backBarButtonItem?.tintColor = .black
         navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     private func configureDelegatesAndHandlers() {
-        loginView.emailTextField.delegate = self
-        loginView.passwordTextField.delegate = self
-        loginView.loginButton.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
-        loginView.backButton.addTarget(
+        registerView.emailTextField.delegate = self
+        registerView.passwordTextField.delegate = self
+        registerView.loginButton.addTarget(self, action: #selector(handleCreateAccount), for: .touchUpInside)
+        registerView.backButton.addTarget(
             self,
             action: #selector(handleBackButton),
             for: .touchUpInside
@@ -123,17 +123,17 @@ class LoginController: UIViewController {
     override func viewWillTransition(to size: CGSize,
                                      with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        loginView.emailTopConstraint.constant = UIDevice.current.orientation.isLandscape ? 15 : 50
-        loginView.passwordTopConstraint.constant = UIDevice.current.orientation.isLandscape ? 5 : 20
+        registerView.emailTopConstraint.constant = UIDevice.current.orientation.isLandscape ? 15 : 50
+        registerView.passwordTopConstraint.constant = UIDevice.current.orientation.isLandscape ? 5 : 20
     }
 }
 
 // MARK: - UITextFieldDelegate
 
-extension LoginController: UITextFieldDelegate {
+extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if loginView.emailTextField.isFirstResponder, loginView.passwordTextField.text!.isEmpty {
-            loginView.passwordTextField.becomeFirstResponder()
+        if registerView.emailTextField.isFirstResponder, registerView.passwordTextField.text!.isEmpty {
+            registerView.passwordTextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
         }

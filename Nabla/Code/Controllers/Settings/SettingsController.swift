@@ -55,7 +55,7 @@ class SettingsController: UIViewController, UITableViewDelegate {
     }
     
     @objc func reloadTableDevice(notification: NSNotification){
-        tableView.reloadSections([0], with: .automatic)
+        tableView.reloadSections([0,2], with: .automatic)
     }
 }
 

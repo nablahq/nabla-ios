@@ -393,8 +393,7 @@ class RideController: UIViewController {
                                                        zoom: navigationMapView.mapView.cameraState.zoom),
                                              duration: 0,
                                              completion: nil)
-        
-        
+                
         navigationMapView.mapView.mapboxMap.style.uri = .streets
       
         view.addSubview(bottomView)
@@ -405,12 +404,10 @@ class RideController: UIViewController {
         bottomView.addSubview(routeInfoLabel)
         bottomView.addSubview(profileImageView)
         
-        
         backButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: view.safeAreaInsets.top + 60, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 30, heightConstant: 30)
-        optionsButton.anchor(view.topAnchor, left:nil, bottom: nil, right:  view.rightAnchor, topConstant: view.safeAreaInsets.top + 60, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 80, heightConstant: 30)
-        bottomView.anchor(nil, left:view.leftAnchor, bottom: view.bottomAnchor, right:  view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: -10, rightConstant: 0, widthConstant: 0, heightConstant: 180)
+        optionsButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: view.safeAreaInsets.top + 60, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 80, heightConstant: 30)
+        bottomView.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: -10, rightConstant: 0, widthConstant: 0, heightConstant: 180)
         x = createRouteView.anchorWithReturnAnchors(bottomView.topAnchor, left: bottomView.leftAnchor, bottom: nil, right: bottomView.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 90)
-        
         
         startButton.anchor(bottomView.topAnchor, left: nil, bottom: nil, right: bottomView.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 80, heightConstant: 80)
         routeInfoLabel.anchor(nil, left: bottomView.leftAnchor, bottom: bottomView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 20, bottomConstant: 80, rightConstant: 0, widthConstant: 200, heightConstant: 35)

@@ -10,6 +10,12 @@ import Bluejay
 
 class BLEController: UIViewController {
     
+    static func create() -> BLEController {
+        let viewController = BLEController()
+        return viewController
+    }
+    var onLogin: (() -> Void)!
+    
     private var encoder = DataEncoder()
     private var currentData = Data()
     private var lastData = Data()
@@ -70,6 +76,27 @@ class BLEController: UIViewController {
         return button
     }()
     
+    let yourAttributes: [NSAttributedString.Key: Any] = [
+        .font: UIFont.systemFont(ofSize: 14),
+        .foregroundColor: UIColor.lightGray,
+        .underlineStyle: NSUnderlineStyle.single.rawValue
+    ] // .double.rawValue, .thick.rawValue
+    
+    lazy var skipButton: UIButton = {
+        let attributeString = NSMutableAttributedString(
+            string: "Use without Nabla device",
+            attributes: yourAttributes
+        )
+        
+        let button = UIButton()
+        button.tintColor =  .black
+        button.setAttributedTitle(attributeString, for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .clear
+        button.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewWillAppear(_ animated: Bool) {
         self.hidesBottomBarWhenPushed = true
         bluejay.register(connectionObserver: self)
@@ -83,15 +110,23 @@ class BLEController: UIViewController {
         view.addSubview(labelTitle)
         view.addSubview(labelSubtitle)
         view.addSubview(closeButton)
-        
-        closeButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: view.safeAreaInsets.top + 50, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 35, heightConstant: 35)
+        view.addSubview(skipButton)
         
         deviceImage.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: view.safeAreaInsets.top + 80, leftConstant: view.frame.size.width/2 - 80, bottomConstant: 0, rightConstant: 0, widthConstant: 160, heightConstant: 160)
         
         labelTitle.anchor(deviceImage.bottomAnchor, left: view.centerXAnchor, bottom: nil, right: nil, topConstant: 5, leftConstant: -100, bottomConstant: 0, rightConstant: 0, widthConstant: 200, heightConstant: 100)
         
-        labelSubtitle.anchorCenterSuperview()
+        if UserDefaults.standard.bool(forKey: "is_onboarded") == true {
+            view.addSubview(closeButton)
+            
+            closeButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: view.safeAreaInsets.top + 50, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 35, heightConstant: 35)
+        } else {
+            view.addSubview(skipButton)
+            
+            skipButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: view.safeAreaInsets.bottom + 60, rightConstant: 16, widthConstant: 0, heightConstant: 50)
+        }
         
+        labelSubtitle.anchorCenterSuperview()
         
         NotificationCenter.default.addObserver(
             self,
@@ -161,9 +196,7 @@ class BLEController: UIViewController {
                     } else {
                         print("Scan stopped without error")
                         
-                        if(self.sensors.isEmpty)
-                        {
-                            
+                        if self.sensors.isEmpty {
                             let alert = UIAlertController(
                                 title: "No Nablas found",
                                 message: nil,
@@ -175,8 +208,7 @@ class BLEController: UIViewController {
                             }))
                             
                             self.present( alert, animated: true, completion: nil)
-                        }
-                        else {
+                        } else {
                             let alertController = UIAlertController(title: "Nabla devices", message: nil, preferredStyle: .actionSheet)
                             self.sensors.map({ payload in UIAlertAction(title: "NablaMoto \(payload.peripheralIdentifier.name )" , style: .default, handler: {_ in
                                 self.labelTitle.text = "Connecting device"
@@ -192,7 +224,6 @@ class BLEController: UIViewController {
                             self.present(alertController, animated: true, completion: nil)
                         }
                     }
-                    
                 })
         }
     }
@@ -282,9 +313,13 @@ class BLEController: UIViewController {
         print("DEBUG: \(logLine)")
     }
     
-    @objc func closeButtonPressed()
-    {
-        dismiss(animated: true)
+    @objc func closeButtonPressed() {
+        if UserDefaults.standard.bool(forKey: "is_onboarded") == true {
+            dismiss(animated: true)
+        } else {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadTableDevice"), object: nil)
+            onLogin()
+        }
     }
 }
 

@@ -18,7 +18,6 @@ class HomeController: UIViewController, UITableViewDelegate, AddPlaceButtonDeleg
     fileprivate let sectionHeaderId = "sectionHeader"
     fileprivate let sectionFooterId = "sectionFooterId"
     
-    
     lazy var tableView: UITableView = {
         let tv = UITableView()
         tv.backgroundColor = .white
@@ -100,6 +99,11 @@ class HomeController: UIViewController, UITableViewDelegate, AddPlaceButtonDeleg
         tabBarController?.hidesBottomBarWhenPushed = false
         loadPlacesFromUserDefaults()
         bluejay.register(connectionObserver: self)
+        
+        if UserDefaults.standard.bool(forKey: "is_onboarded") != true {
+            print("nije onboardan")
+            UserDefaults.standard.set(true, forKey: "is_onboarded")
+        }
     }
     
     func loadPlacesFromUserDefaults() {
@@ -107,7 +111,7 @@ class HomeController: UIViewController, UITableViewDelegate, AddPlaceButtonDeleg
         print(places.isEmpty)
         let userDefaults = UserDefaults.standard
         if let savedData = userDefaults.object(forKey: "places") as? Data {
-            do{
+            do {
                 let savedPlaces = try JSONDecoder().decode([Place].self, from: savedData)
                 print(savedPlaces.count)
                 places.removeAll(keepingCapacity: false)
@@ -161,11 +165,9 @@ class HomeController: UIViewController, UITableViewDelegate, AddPlaceButtonDeleg
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: emptyCellId)
         tableView.register(TableSectionHeader.self, forHeaderFooterViewReuseIdentifier: sectionHeaderId)
         tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: sectionFooterId)
-
         
         setupDeviceButtonImage()
-        
-        
+                
         NotificationCenter.default.addObserver(self, selector: #selector(reloadDeviceImage), name: NSNotification.Name(rawValue: "deviceConnected"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadPlaces), name: NSNotification.Name(rawValue: "reloadPlaces"), object: nil)
 

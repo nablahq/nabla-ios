@@ -1,6 +1,14 @@
+//
+//  RegisterView.swift
+//  Nabla
+//
+//  Created by Jaksa Tomovic on 21.09.2023..
+//  Copyright © 2023 canarin team. All rights reserved.
+//
+
 import UIKit
 
-class LoginView: UIView {
+class RegisterView: UIView {
     var emailTextField: UITextField! {
         didSet {
             emailTextField.textContentType = .emailAddress
@@ -18,7 +26,7 @@ class LoginView: UIView {
     
     lazy var loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Sign in", for: .normal)
+        button.setTitle("Create", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .black
         button.clipsToBounds = true
@@ -35,7 +43,7 @@ class LoginView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sign in"
+        label.text = "Create account"
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 22, weight: .medium)
@@ -87,7 +95,7 @@ class LoginView: UIView {
         addSubview(loginButton)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
    
-        loginButton.anchor(passwordTextField.bottomAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 15, widthConstant: 80, heightConstant: 30)
+        loginButton.anchor(passwordTextField.bottomAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 30, leftConstant: 0, bottomConstant: 0, rightConstant: 15, widthConstant: 90, heightConstant: 30)
     }
     
     private func setupBackButton() {
